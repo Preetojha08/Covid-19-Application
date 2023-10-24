@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SymptomsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Common Symptoms"
+            android:layout_alignParentTop="true"
+            android:id="@+id/common_symptoms_heading"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_18sdp"
+            android:background="@color/colorRed"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_common_symptoms"
+            android:layout_below="@+id/common_symptoms_heading"
+            android:layout_marginTop="@dimen/_6sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Some people may experience Special Symptoms "
+            android:id="@+id/second_symptoms_heading"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_below="@+id/recyclerview_common_symptoms"
+            android:background="@color/colorRed"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_second_symptoms"
+            android:layout_below="@+id/second_symptoms_heading"
+            android:layout_marginTop="@dimen/_6sdp"/>
+
+    </RelativeLayout>
+
+</ScrollView>
