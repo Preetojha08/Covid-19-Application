@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     TextView viewall_safetymajors;
 
     //quaratine activity
-    CardView cardview_quaratine_act;
+    CardView cardview_quaratine_act,cardView_covidhelpcenter;
 
     TextView begiintest_tv;
 
@@ -40,6 +40,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        cardView_covidhelpcenter = (CardView) findViewById(R.id.covid_helpcenter_cardview);
+
+        cardView_covidhelpcenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,CovidHelpCenterActivity.class));
+            }
+        });
 
         viewall_symptos = (TextView) findViewById(R.id.home_viewall_symptoms);
         viewall_symptos.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +61,8 @@ public class HomeActivity extends AppCompatActivity {
         begiintest_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, TestFormActivity.class));
+                //startActivity(new Intent(HomeActivity.this, TestFormActivity.class));
+                startActivity(new Intent(HomeActivity.this, TestMainActivity.class));
             }
         });
 

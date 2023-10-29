@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestFormActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/main_layout"
+        android:padding="@dimen/_12sdp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/colorPrimary"
+                android:inputType="text"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                android:inputType="number"
+                 android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                 android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/colorPrimary"
+                android:minLines="2"
+                android:gravity="top|left"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linear_gender_layout"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:padding="@dimen/_12sdp"
+            android:background="@drawable/text_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                 android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_12sdp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gender_radio_group">
+
+                <RadioButton
+                    android:id="@+id/radioButtonmale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:fontFamily="@font/gilroy_bold"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:buttonTint="@drawable/radio_button_bg"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonfemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textColor="@color/colorPrimary"
+                     android:fontFamily="@font/gilroy_bold"
+                    android:buttonTint="@drawable/radio_button_bg"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonothers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:buttonTint="@drawable/radio_button_bg"
+                     android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Others" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/linear_language_layout"
+            android:padding="@dimen/_12sdp"
+            android:background="@drawable/text_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Language"
+                 android:fontFamily="@font/gilroy_bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_12sdp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/language_radio_group">
+
+                <RadioButton
+                    android:id="@+id/radioButtonhindi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:fontFamily="@font/gilroy_bold"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Hindi" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonenglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textColor="@color/colorPrimary"
+                     android:fontFamily="@font/gilroy_bold"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="English" />
+
+                <RadioButton
+                    android:id="@+id/radioButtongujarati"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:buttonTint="@color/colorPrimaryDark"
+                     android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Gujarati" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp"
+        android:text="Start Test"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@drawable/text_border"
+        android:fontFamily="@font/gilroy_bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/main_layout"
+        android:backgroundTint="@color/colorPrimaryDark"/>
+
+    </RelativeLayout>
+
+</ScrollView>
