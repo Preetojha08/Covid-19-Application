@@ -13,6 +13,12 @@
         android:theme="@style/Theme.COVIDApp"
         tools:targetApi="31">
         <activity
+            android:name=".TestFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuarantineActivity"
+            android:exported="false" />
+        <activity
             android:name=".SafetyMajorsActivity"
             android:exported="false" />
         <activity

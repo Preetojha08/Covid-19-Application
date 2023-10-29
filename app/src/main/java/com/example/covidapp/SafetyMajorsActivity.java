@@ -42,17 +42,17 @@ public class SafetyMajorsActivity extends AppCompatActivity {
 
         detail_safety_majors_titles.add("Spend Time With Family ");
 
-        detail_safety_majors_desc.add("Regularly and thoroughly clean your hands with an alcohol - based hand sanitizer or wash them with soap and water after coming from outside and in every three hours interval.    ");
+        detail_safety_majors_desc.add("Regularly and thoroughly clean your hands with an alcohol - based hand sanitizer or wash them with soap and water after coming from outside and in every three hours interval.");
         detail_safety_majors_desc.add("Wear a mask if you are coughing or sneezing. Masks are effective only when used in combination with frequent hand-cleaning with alcohol-based hand rub or soap and water.");
-        detail_safety_majors_desc.add("Its time to practice social distancing, which simply implies to staying at home. Maintain at least 1 metre (3 feet) distance between yourself and who is coughing or sneezing.   ");
-        detail_safety_majors_desc.add("Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. So don not touch your Face.   ");
-        detail_safety_majors_desc.add("Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze.       ");
+        detail_safety_majors_desc.add("Its time to practice social distancing, which simply implies to staying at home. Maintain at least 1 metre (3 feet) distance between yourself and who is coughing or sneezing.");
+        detail_safety_majors_desc.add("Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. So don not touch your Face.");
+        detail_safety_majors_desc.add("Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze.");
 
-        detail_safety_majors_desc.add("If you have a fever, cough and difficulty breathing, seek medical attention, call in advance and stay at home.         ");
-        detail_safety_majors_desc.add("Disinfect everything that you touch every frequently. From doorknobs, lights, handles, surfaces, TV remotes, drawers, washbasin to toilets, make sure everything is clean.      ");
-        detail_safety_majors_desc.add("Include essential vitamin supplements like vitamin B12 with Methylcobalamin, vitamin D3, vitamin C and turmeric in your diet.    ");
-        detail_safety_majors_desc.add("Coconut water, lemon water, water with vitamin C supplements drink as much as possible to flush the toxins and strengthen your immune system.         ");
-        detail_safety_majors_desc.add("Lot information is available out there on TV, internet and social media. But not everything is true. Please be careful about what is read and consumed.     ");
+        detail_safety_majors_desc.add("If you have a fever, cough and difficulty breathing, seek medical attention, call in advance and stay at home.");
+        detail_safety_majors_desc.add("Disinfect everything that you touch every frequently. From doorknobs, lights, handles, surfaces, TV remotes, drawers, washbasin to toilets, make sure everything is clean.");
+        detail_safety_majors_desc.add("Include essential vitamin supplements like vitamin B12 with Methylcobalamin, vitamin D3, vitamin C and turmeric in your diet.");
+        detail_safety_majors_desc.add("Coconut water, lemon water, water with vitamin C supplements drink as much as possible to flush the toxins and strengthen your immune system.");
+        detail_safety_majors_desc.add("Lot information is available out there on TV, internet and social media. But not everything is true. Please be careful about what is read and consumed.");
 
         detail_safety_majors_desc.add("What no one could do, this virus has done. Bring families together. Before we all get engrossed in our lives again let's spend some quality time with our families. Bond over food, books, talks, and play dates.   ");
 

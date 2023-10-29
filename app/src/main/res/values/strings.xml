@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">COVID App</string>
-    <string name="about_covid_splash">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.                                                                     </string>
+    <string name="about_covid_splash">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment. </string>
+
+    <string name="eng_quarantine_acts_exercise_1">Do Exercise At Home</string>
+    <string name="eng_quarantine_acts_new_recipes_2">Try To Learn New Recipes</string>
+    <string name="eng_quarantine_acts_read_book_3">Grab A Book and Relax</string>
+    <string name="eng_quarantine_acts_friends_4">Connect With Friends</string>
+    <string name="eng_quarantine_acts_watch_sports_5">Watch Classic Sports Replays</string>
+    <string name="eng_quarantine_acts_watch_movies_6">Watch New Shows and Movies</string>
+    <string name="eng_quarantine_acts_learn_lang_7">Learn New Language</string>
+
+    <string name="eng_quarantine_acts_exercise_para_1">Exercise empties the mind and fills you with positivity and power. Perfect for getting in the right mindset for the day ahead. Try to do at least one gym class every day.                                 </string>
+    <string name="eng_quarantine_acts_new_recipes_para_2">It is such a fulfilling activity that we can do with our families and enjoy spending some time together, while cooking delicious cakes and etc.                                 </string>
+    <string name="eng_quarantine_acts_read_book_para_3">Find a comfy place around your house. Grab a book and get immersed in it; you don’t have any time limits or schedules to follow.                                 </string>
+    <string name="eng_quarantine_acts_friends_para_4">Whether you prefer to use WhatsApp, Skype, Netflix Party, or any other platform that you like, take a moment every day to connect with your friends.                                 </string>
+    <string name="eng_quarantine_acts_watch_sports_para_5">There are no live sports to watch on TV right now. But there is something amazing going on around the world: many of the classic sports matches from history are being replayed on TV!                                 </string>
+    <string name="eng_quarantine_acts_watch_movies_para_6">We always want more and more time to watch new shows, series and movies. The newest season of Netflix’s world famous and addictive La Casa de Papel (Money Heist) series came out just a few weeks ago.                                 </string>
+    <string name="eng_quarantine_acts_learn_lang_para_7">It is as easy as downloading an app like Duolingo, choosing the language you would like to learn and do a little bit of it every day.                                 </string>
+
 
 </resources>

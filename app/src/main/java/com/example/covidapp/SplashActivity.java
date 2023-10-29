@@ -19,17 +19,11 @@ import com.codesgood.views.JustifiedTextView;
 public class SplashActivity extends AppCompatActivity {
 
     ImageView SplashScreen_imageView;
-    JustifiedTextView splashscreen_covid_info;
-    String dummy_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
-        dummy_text = getResources().getString(R.string.about_covid_splash);
-        splashscreen_covid_info=(JustifiedTextView) findViewById(R.id.slpash_covid_para_textview);
-        splashscreen_covid_info.setText(Html.fromHtml(dummy_text));
 
         int splash_screen_timeout = 3000;
 

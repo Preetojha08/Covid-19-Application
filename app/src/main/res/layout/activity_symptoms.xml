@@ -19,6 +19,7 @@
             android:id="@+id/common_symptoms_heading"
             android:paddingHorizontal="@dimen/_12sdp"
             android:paddingVertical="@dimen/_18sdp"
+            android:fontFamily="@font/gilroy_bold"
             android:background="@color/colorRed"
             android:textColor="@color/white"
             android:textStyle="bold"/>
@@ -38,6 +39,7 @@
             android:paddingHorizontal="@dimen/_12sdp"
             android:paddingVertical="@dimen/_18sdp"
             android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/gilroy_bold"
             android:layout_below="@+id/recyclerview_common_symptoms"
             android:background="@color/colorRed"
             android:textColor="@color/white"

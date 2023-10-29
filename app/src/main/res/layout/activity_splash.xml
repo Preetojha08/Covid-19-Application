@@ -29,13 +29,17 @@
             android:text="COVID 19"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_gravity="center"
+            android:fontFamily="@font/gilroy_bold"
             android:textStyle="bold"/>
 
-        <com.codesgood.views.JustifiedTextView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/slpash_covid_para_textview"
             android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="@font/gilroy_light"
+            android:text="@string/about_covid_splash"
+            android:justificationMode="inter_word"
             android:layout_gravity="center"/>
 
 
@@ -47,6 +51,8 @@
         android:text="Stay Home, Stay Safe"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:fontFamily="@font/gilroy_bold"
+        android:textColor="@color/colorRed"
         android:layout_marginBottom="@dimen/_50sdp"/>
 
 

@@ -1,6 +1,7 @@
 package com.example.covidapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,9 +27,13 @@ public class HomeActivity extends AppCompatActivity {
     //Safety Majors
     List<String> safetymajors_titles;
     List<Integer> safetymajors_images;
-
     TextView viewall_symptos;
     TextView viewall_safetymajors;
+
+    //quaratine activity
+    CardView cardview_quaratine_act;
+
+    TextView begiintest_tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +49,25 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        begiintest_tv = (TextView) findViewById(R.id.home_begin_test_button);
+        begiintest_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, TestFormActivity.class));
+            }
+        });
+
         home_symptoms_rv=(RecyclerView) findViewById(R.id.symptoms_recyclerview);
         home_safetymajors_rv =(RecyclerView) findViewById(R.id.safetymajors_recyclerview);
+
+        cardview_quaratine_act = (CardView) findViewById(R.id.home_quaratine_card_view);
+
+        cardview_quaratine_act.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, QuarantineActivity.class));
+            }
+        });
 
         viewall_safetymajors = (TextView) findViewById(R.id.view_safetymajors);
 
