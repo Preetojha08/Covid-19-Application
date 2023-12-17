@@ -3,9 +3,19 @@
     android:interpolator="@android:anim/linear_interpolator"
     android:fillAfter="true">
 
+    <rotate
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromDegrees="0"
+        android:toDegrees="180"
+        android:duration="1100"
+        android:startOffset="0"
+        android:repeatCount="infinite"
+        />
+
     <translate
         android:fromXDelta="0%p"
-        android:toXDelta="75%p"
-        android:duration="1500" />
+        android:toXDelta="180%p"
+        android:duration="2000" />
 
 </set>

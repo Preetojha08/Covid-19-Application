@@ -3,8 +3,17 @@
     android:interpolator="@android:anim/linear_interpolator"
     android:fillAfter="true">
 
+    <rotate
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromDegrees="180"
+        android:toDegrees="360"
+        android:duration="1000"
+        android:repeatCount="1"
+        />
+
     <translate
-        android:fromXDelta="-90%p"
+        android:fromXDelta="-150%p"
         android:toXDelta="0%p"
         android:duration="2000" />
 
