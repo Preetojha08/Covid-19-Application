@@ -25,7 +25,10 @@ public class TestMainActivity extends AppCompatActivity {
     RadioButton Q1Yes, Q1No, Q2Yes, Q2No, Q3Yes, Q3No, Q4Yes, Q4No, Q5Yes, Q5No;
     RadioButton Q6Yes, Q6No, Q7Yes, Q7No, Q8Yes, Q8No, Q9Yes, Q9No, Q10Yes, Q10No, Q11Yes, Q11No, Q12Yes, Q12No;
 
+    //Q!
     RadioButton sq1_dry,sq1_cold;
+
+    RadioButton sq2_high,sq2_low,sq2_medium;
     RelativeLayout relativeLayout_q1,relativeLayout_q2,relativeLayout_q3,relativeLayout_q4,relativeLayout_q5,relativeLayout_q6;
     RelativeLayout relativeLayout_q7,relativeLayout_q8,relativeLayout_q9,relativeLayout_q10,relativeLayout_q11,relativeLayout_q12;
     RelativeLayout next_btn_relative_layout;
@@ -65,13 +68,6 @@ public class TestMainActivity extends AppCompatActivity {
         //Subquestion Layout
         relativeLayout_q1 = (RelativeLayout)findViewById(R.id.sub_part_question1_layout);
         relativeLayout_q2 = (RelativeLayout)findViewById(R.id.sub_part_question2_layout);
-        relativeLayout_q3 = (RelativeLayout)findViewById(R.id.sub_part_question3_layout);
-        relativeLayout_q4 = (RelativeLayout)findViewById(R.id.sub_part_question4_layout);
-        relativeLayout_q5 = (RelativeLayout)findViewById(R.id.sub_part_question5_layout);
-        relativeLayout_q6 = (RelativeLayout)findViewById(R.id.sub_part_question6_layout);
-        relativeLayout_q7 = (RelativeLayout)findViewById(R.id.sub_part_question7_layout);
-        relativeLayout_q8 = (RelativeLayout)findViewById(R.id.sub_part_question8_layout);
-        relativeLayout_q9 = (RelativeLayout)findViewById(R.id.sub_part_question9_layout);
         relativeLayout_q10 = (RelativeLayout)findViewById(R.id.sub_part_question10_layout);
         relativeLayout_q11 = (RelativeLayout)findViewById(R.id.sub_part_question11_layout);
         relativeLayout_q12 = (RelativeLayout)findViewById(R.id.sub_part_question12_layout);
@@ -81,6 +77,14 @@ public class TestMainActivity extends AppCompatActivity {
         Q1No = (RadioButton)findViewById(R.id.q1_radioButton2);
         sq1_dry = (RadioButton)findViewById(R.id.q1_subradioButton1);
         sq1_cold = (RadioButton)findViewById(R.id.q1_subradioButton2);
+
+        //Radio Button of Question 2
+        Q2Yes = (RadioButton)findViewById(R.id.q2_radioButton1);
+        Q2No = (RadioButton)findViewById(R.id.q2_radioButton2);
+        sq2_high = (RadioButton)findViewById(R.id.q2_subradioButton1);
+        sq2_medium = (RadioButton)findViewById(R.id.q2_subradioButton2);
+        sq2_low = (RadioButton)findViewById(R.id.q2_subradioButton3);
+
 
         //Main Layout
         scrollview_main_layout = (ScrollView) findViewById(R.id.main_scrollview_layout_bg);
@@ -135,6 +139,7 @@ public class TestMainActivity extends AppCompatActivity {
             }
         });
 
+        //Question 1
         Q1Yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,10 +147,6 @@ public class TestMainActivity extends AppCompatActivity {
                 {
                     relativeLayout_q1.startAnimation(animation_down);
                     relativeLayout_q1.setVisibility(View.VISIBLE);
-                }
-                if (Q1No.isChecked())
-                {
-                    question_counter = 2;
                 }
 
             }
@@ -199,6 +200,360 @@ public class TestMainActivity extends AppCompatActivity {
             }
         });
 
+        //Question 2
+        Q2Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q2Yes.isChecked())
+                {
+                    relativeLayout_q2.startAnimation(animation_down);
+                    relativeLayout_q2.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        Q2No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q2No.isChecked())
+                {
+                    relativeLayout_q2.startAnimation(animation_up);
+                    animation_up.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            relativeLayout_q2.setVisibility(View.GONE);
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
+                    question_counter=3;
+                }
+            }
+        });
+        sq2_high.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sq2_high.isChecked())
+                {
+                    question_counter=3;
+                }
+            }
+        });
+        sq2_medium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sq2_medium.isChecked())
+                {
+                    question_counter=3;
+                }
+            }
+        });
+        sq2_low.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sq2_low.isChecked())
+                {
+                    question_counter=3;
+                }
+            }
+        });
+
+        //Question 3
+        Q3Yes = (RadioButton)findViewById(R.id.q3_radioButton1);
+        Q3No = (RadioButton)findViewById(R.id.q3_radioButton2);
+        Q3Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q3Yes.isChecked())
+                {
+                    question_counter=4;
+                }
+            }
+        });
+        Q3No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q3No.isChecked())
+                {
+                    question_counter=4;
+                }
+            }
+        });
+
+        //Question 4
+        Q4Yes = (RadioButton)findViewById(R.id.q4_radioButton1);
+        Q4No = (RadioButton)findViewById(R.id.q4_radioButton2);
+        Q4Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q4Yes.isChecked())
+                {
+                    question_counter=5;
+                }
+            }
+        });
+        Q4No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q4No.isChecked())
+                {
+                    question_counter=5;
+                }
+            }
+        });
+
+        //Question 5
+        Q5Yes = (RadioButton)findViewById(R.id.q5_radioButton1);
+        Q5No = (RadioButton)findViewById(R.id.q5_radioButton2);
+        Q5Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q5Yes.isChecked())
+                {
+                    question_counter=6;
+                }
+            }
+        });
+        Q5No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q5No.isChecked())
+                {
+                    question_counter=6;
+                }
+            }
+        });
+
+        //Question 6
+        Q6Yes = (RadioButton)findViewById(R.id.q6_radioButton1);
+        Q6No = (RadioButton)findViewById(R.id.q6_radioButton2);
+
+        Q6Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q6Yes.isChecked())
+                {
+                    question_counter=7;
+                }
+            }
+        });
+        Q6No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q6No.isChecked())
+                {
+                    question_counter=7;
+                }
+            }
+        });
+
+        //Question 7
+        Q7Yes = (RadioButton)findViewById(R.id.q7_radioButton1);
+        Q7No = (RadioButton)findViewById(R.id.q7_radioButton2);
+        Q7Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q7Yes.isChecked())
+                {
+                    question_counter=8;
+                }
+            }
+        });
+        Q7No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q7No.isChecked())
+                {
+                    question_counter=8;
+                }
+            }
+        });
+
+        //Question 8
+        Q8Yes = (RadioButton)findViewById(R.id.q8_radioButton1);
+        Q8No = (RadioButton)findViewById(R.id.q8_radioButton2);
+
+        Q8Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q8Yes.isChecked())
+                {
+                    question_counter=9;
+                }
+            }
+        });
+        Q8No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q8No.isChecked())
+                {
+                    question_counter=9;
+                }
+            }
+        });
+
+        //Question 9
+        Q9Yes = (RadioButton)findViewById(R.id.q9_radioButton1);
+        Q9No = (RadioButton)findViewById(R.id.q9_radioButton2);
+
+        Q9Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q9Yes.isChecked())
+                {
+                    question_counter=10;
+                }
+            }
+        });
+        Q9No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q9No.isChecked())
+                {
+                    question_counter=10;
+                }
+            }
+        });
+
+        //Question 10
+        Q10Yes = (RadioButton)findViewById(R.id.q10_radioButton1);
+        Q10No = (RadioButton)findViewById(R.id.q10_radioButton2);
+
+        relativeLayout_q10.setVisibility(View.GONE);
+        Q10Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q10Yes.isChecked())
+                {
+                    relativeLayout_q10.startAnimation(animation_down);
+                    relativeLayout_q10.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        Q10No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q10No.isChecked())
+                {
+                    relativeLayout_q10.startAnimation(animation_up);
+                    animation_up.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            relativeLayout_q10.setVisibility(View.GONE);
+                            question_counter=11;
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
+
+                    question_counter=11;
+                }
+            }
+        });
+
+        //Question 11
+        Q11Yes = (RadioButton)findViewById(R.id.q11_radioButton1);
+        Q11No = (RadioButton)findViewById(R.id.q11_radioButton2);
+        relativeLayout_q11.setVisibility(View.GONE);
+        Q11Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q11Yes.isChecked())
+                {
+                    relativeLayout_q11.startAnimation(animation_down);
+                    relativeLayout_q11.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        Q11No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q11No.isChecked())
+                {
+                    relativeLayout_q11.startAnimation(animation_up);
+                    animation_up.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            relativeLayout_q11.setVisibility(View.GONE);
+                            question_counter=12;
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
+                }
+            }
+        });
+
+        //Question 12
+
+        Q12Yes = (RadioButton)findViewById(R.id.q12_radioButton1);
+        Q12No = (RadioButton)findViewById(R.id.q12_radioButton2);
+        relativeLayout_q12.setVisibility(View.GONE);
+        Q12Yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q12Yes.isChecked())
+                {
+                    relativeLayout_q12.startAnimation(animation_down);
+                    relativeLayout_q12.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        Q12No.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Q12No.isChecked())
+                {
+                    relativeLayout_q12.startAnimation(animation_up);
+                    animation_up.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                        relativeLayout_q12.setVisibility(View.GONE);
+                        question_counter=13;
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
+                }
+            }
+        });
+
+        //qUESTION 10 YAHA SE START HOGA
+
         cardview_layout_next_btn.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             @Override
@@ -206,10 +561,10 @@ public class TestMainActivity extends AppCompatActivity {
 
                 switch (question_counter)
                 {
-                    case 1:
+                    case 2:
                         cardview_layout_q1.startAnimation(animation_right);
                         cardview_layout_q2.startAnimation(animation_left);
-
+                        relativeLayout_q2.setVisibility(View.GONE);
                         cardview_layout_q1.setVisibility(View.GONE);
                         cardview_layout_q2.setVisibility(View.VISIBLE);
                         cardview_layout_q3.setVisibility(View.GONE);
@@ -227,7 +582,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 2:
+                    case 3:
                         cardview_layout_q2.startAnimation(animation_right);
                         cardview_layout_q3.startAnimation(animation_left);
 
@@ -248,7 +603,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 3:
+                    case 4:
                         cardview_layout_q3.startAnimation(animation_right);
                         cardview_layout_q4.startAnimation(animation_left);
 
@@ -269,7 +624,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 4:
+                    case 5:
                         cardview_layout_q4.startAnimation(animation_right);
                         cardview_layout_q5.startAnimation(animation_left);
 
@@ -289,7 +644,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 5:
+                    case 6:
                         cardview_layout_q5.startAnimation(animation_right);
                         cardview_layout_q6.startAnimation(animation_left);
 
@@ -309,7 +664,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 6:
+                    case 7:
                         cardview_layout_q6.startAnimation(animation_right);
                         cardview_layout_q7.startAnimation(animation_left);
 
@@ -329,7 +684,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 7:
+                    case 8:
                         cardview_layout_q7.startAnimation(animation_right);
                         cardview_layout_q8.startAnimation(animation_left);
 
@@ -349,7 +704,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 8:
+                    case 9:
                         cardview_layout_q8.startAnimation(animation_right);
                         cardview_layout_q9.startAnimation(animation_left);
 
@@ -369,7 +724,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 9:
+                    case 10:
                         cardview_layout_q9.startAnimation(animation_right);
                         cardview_layout_q10.startAnimation(animation_left);
 
@@ -389,7 +744,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 10:
+                    case 11:
                         cardview_layout_q10.startAnimation(animation_right);
                         cardview_layout_q11.startAnimation(animation_left);
 
@@ -409,7 +764,7 @@ public class TestMainActivity extends AppCompatActivity {
 
                         break;
 
-                    case 11:
+                    case 12:
                         cardview_layout_q11.startAnimation(animation_right);
                         cardview_layout_q12.startAnimation(animation_left);
                         cardview_layout_q1.setVisibility(View.GONE);
@@ -427,18 +782,34 @@ public class TestMainActivity extends AppCompatActivity {
                         result_layout.setVisibility(View.GONE);
                         break;
 
-                    case 12:
+                    case 13:
                         cardview_layout_q12.setAnimation(animation_right);
                         next_btn_relative_layout.setAnimation(animation_right);
-                        result_layout.setVisibility(View.VISIBLE);
-                        cardview_layout_q12.setVisibility(View.GONE);
-                        next_btn_relative_layout.setVisibility(View.GONE);
-                        //result_layout.startAnimation(animation_fade);
-                        //Toast.makeText(TestMainActivity.this, " "+question_counter, Toast.LENGTH_SHORT).show();
-                        scrollview_main_layout.setBackgroundResource(R.color.colorPrimaryDark);
+
+                        animation_right.setAnimationListener(new Animation.AnimationListener() {
+                            @Override
+                            public void onAnimationStart(Animation animation) {
+                                Toast.makeText(TestMainActivity.this, "Start the Toast", Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animation animation) {
+                                Toast.makeText(TestMainActivity.this, "End the Toast", Toast.LENGTH_SHORT).show();
+                                cardview_layout_q12.setVisibility(View.GONE);
+                                next_btn_relative_layout.setVisibility(View.GONE);
+
+                                result_layout.startAnimation(animation_left);
+                                result_layout.setVisibility(View.VISIBLE);
+                                scrollview_main_layout.setBackgroundResource(R.color.colorPrimaryDark);
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animation animation) {
+
+                            }
+                        });
+
                         break;
-
-
                 }
             }
         });
