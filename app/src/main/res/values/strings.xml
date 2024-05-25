@@ -22,7 +22,7 @@
     <string name="Disclaimer_2">By clicking on Accept and Begin the Survey below you hereby acknowledge that you have read this very carefully and understand it and than agreed to all terms and conditions set forth in the terms of use and the Privacy Policy.</string>
     <string name="Disclaimer_3">If you do not agree with any terms and conditions set forth in the terms of use or the privacy policy, do not check the boxes below and exit from this screen. </string>
     <string name="Disclaimer_4">If you are acting on behalf of an organization, you represent that you are authorized to act on behalf of such organization and that your acceptance of the terms of this agreement creates a legally enforceable obligation of the particular organization.</string>
-
+    <string name="gender">Gender</string>
 
 
 </resources>

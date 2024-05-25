@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        int splash_screen_timeout = 3000;
+        int splash_screen_timeout = 2000;
 
         SplashScreen_imageView = (ImageView)findViewById(R.id.splash_icon_imageview);
 

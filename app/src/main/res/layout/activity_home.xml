@@ -90,18 +90,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Infected"
                         android:fontFamily="@font/gilroy_bold"
+                        android:text="Infected"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/_14sdp"/>
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="123456789"
+                        android:id="@+id/textview_infected_count"
                         android:layout_marginTop="@dimen/_6sdp"
                         android:fontFamily="@font/gilroy_light"
                         android:textColor="@color/white"

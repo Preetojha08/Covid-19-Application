@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.HorizontalScrollView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -28,12 +30,15 @@ public class HomeActivity extends AppCompatActivity {
     List<String> safetymajors_titles;
     List<Integer> safetymajors_images;
     TextView viewall_symptos;
+
+    TextView textView_infected;
     TextView viewall_safetymajors;
 
     //quaratine activity
     CardView cardview_quaratine_act,cardView_covidhelpcenter;
-
+    int progressStatus = 0;
     TextView begiintest_tv;
+    ProgressBar home_progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +67,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //startActivity(new Intent(HomeActivity.this, TestFormActivity.class));
-                startActivity(new Intent(HomeActivity.this, TestMainActivity.class));
+                startActivity(new Intent(HomeActivity.this,TestFormActivity.class));
             }
         });
 

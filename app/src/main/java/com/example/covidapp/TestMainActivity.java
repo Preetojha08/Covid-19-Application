@@ -784,30 +784,12 @@ public class TestMainActivity extends AppCompatActivity {
 
                     case 13:
                         cardview_layout_q12.setAnimation(animation_right);
-                        next_btn_relative_layout.setAnimation(animation_right);
 
-                        animation_right.setAnimationListener(new Animation.AnimationListener() {
-                            @Override
-                            public void onAnimationStart(Animation animation) {
-                                Toast.makeText(TestMainActivity.this, "Start the Toast", Toast.LENGTH_SHORT).show();
-                            }
+                        cardview_layout_q12.setVisibility(View.GONE);
+                        next_btn_relative_layout.setVisibility(View.GONE);
 
-                            @Override
-                            public void onAnimationEnd(Animation animation) {
-                                Toast.makeText(TestMainActivity.this, "End the Toast", Toast.LENGTH_SHORT).show();
-                                cardview_layout_q12.setVisibility(View.GONE);
-                                next_btn_relative_layout.setVisibility(View.GONE);
-
-                                result_layout.startAnimation(animation_left);
-                                result_layout.setVisibility(View.VISIBLE);
-                                scrollview_main_layout.setBackgroundResource(R.color.colorPrimaryDark);
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animation animation) {
-
-                            }
-                        });
+                        result_layout.setVisibility(View.VISIBLE);
+                        scrollview_main_layout.setBackgroundResource(R.color.colorPrimaryDark);
 
                         break;
                 }

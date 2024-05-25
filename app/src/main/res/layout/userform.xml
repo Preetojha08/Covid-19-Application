@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fullname"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:boxStrokeColor="@color/colorPrimary"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:inputType="text"
+                android:fontFamily="@font/abril_fatface"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_14sdp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:boxStrokeColor="@color/colorPrimary"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:fontFamily="@font/abril_fatface"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_14sdp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile Number"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:boxStrokeColor="@color/colorPrimary"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:fontFamily="@font/abril_fatface"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_14sdp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:boxStrokeColor="@color/colorPrimary"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="top"
+                android:fontFamily="@font/abril_fatface"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_14sdp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="vertical"
+            android:background="@drawable/half_round_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14sdp"
+                android:text="@string/gender"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/abril_fatface"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_15sdp"
+                android:paddingHorizontal="@dimen/_11sdp"
+                android:weightSum="3"
+                android:background="@drawable/half_round_border">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/abril_fatface"
+                    android:background="@drawable/complete_round_border"
+                    android:backgroundTint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Male "
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/abril_fatface"
+                    android:background="@drawable/complete_round_border"
+                    android:backgroundTint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/abril_fatface"
+                    android:background="@drawable/complete_round_border"
+                    android:backgroundTint="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="vertical"
+            android:background="@drawable/half_round_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14sdp"
+                android:text="Language"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/abril_fatface"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_15sdp"
+                android:paddingHorizontal="@dimen/_11sdp"
+                android:weightSum="3"
+                android:background="@drawable/half_round_border">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Hindi "
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/abril_fatface"
+                    android:background="@drawable/complete_round_border"
+                    android:backgroundTint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="French "
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/abril_fatface"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@drawable/complete_round_border"
+                    android:backgroundTint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/abril_fatface"
+                    android:background="@drawable/complete_round_border"
+                    android:backgroundTint="@color/white"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/thick_border"
+            android:fontFamily="@font/abril_fatface"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Start"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/_14sdp" />
+
+
+    </LinearLayout>
+
+</ScrollView>

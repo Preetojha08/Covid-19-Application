@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/new_bg"
     tools:context=".TestFormActivity">
 
     <RelativeLayout
@@ -35,6 +36,7 @@
                 android:fontFamily="@font/gilroy_bold"
                 android:textColor="@color/colorPrimary"
                 android:inputType="text"
+                android:id="@+id/uf_fullname_edt"
                 android:textColorHint="@color/colorPrimary"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -44,7 +46,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="Mobile Number"
             android:layout_marginTop="@dimen/_4sdp"
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/colorPrimary"
@@ -55,9 +57,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="@dimen/_5sdp"
-                android:inputType="textEmailAddress"
+                android:inputType="number"
                 android:fontFamily="@font/gilroy_bold"
+                android:maxLength="10"
                 android:textColor="@color/colorPrimary"
+                android:id="@+id/uf_phoneno_edt"
                 android:textColorHint="@color/colorPrimary"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -80,7 +84,8 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="@dimen/_5sdp"
                 android:inputType="number"
-                 android:fontFamily="@font/gilroy_bold"
+                android:id="@+id/uf_age_edt"
+                android:fontFamily="@font/gilroy_bold"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
                 android:textSize="16sp" />
@@ -102,9 +107,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="@dimen/_5sdp"
-                 android:fontFamily="@font/gilroy_bold"
+                android:fontFamily="@font/gilroy_bold"
                 android:textColor="@color/colorPrimary"
-                android:minLines="2"
+                android:minLines="3"
+                android:id="@+id/uf_address_edt"
                 android:gravity="top|left"
                 android:textColorHint="@color/colorPrimary"
                 android:textSize="16sp" />
@@ -124,49 +130,59 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender"
-                 android:fontFamily="@font/gilroy_bold"
+                android:fontFamily="@font/gilroy_bold"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_12sdp"/>
 
-            <RadioGroup
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/gender_radio_group">
+                android:paddingVertical="@dimen/_15sdp"
+                android:paddingHorizontal="@dimen/_11sdp"
+                android:weightSum="3">
 
-                <RadioButton
-                    android:id="@+id/radioButtonmale"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:id="@+id/uf_female_tx"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/gilroy_bold"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:buttonTint="@color/colorPrimary"
-                    android:textColor="@color/colorPrimary"
-                    android:theme="@style/MyRadioButton"
-                    android:text="Male" />
+                    android:background="@drawable/complete_round_border"/>
 
-                <RadioButton
-                    android:id="@+id/radioButtonfemale"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:textColor="@color/colorPrimary"
+                    android:text=" Male "
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:id="@+id/uf_male_tx"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/gilroy_bold"
-                    android:buttonTint="@color/colorPrimary"
-                    android:theme="@style/MyRadioButton"
-                    android:text="Female" />
+                    android:background="@drawable/complete_round_border"/>
 
-                <RadioButton
-                    android:id="@+id/radioButtonothers"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:buttonTint="@color/colorPrimary"
-                    android:theme="@style/MyRadioButton"
+                    android:text="Others"
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:id="@+id/uf_others_tx"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/gilroy_bold"
-                    android:textColor="@color/colorPrimary"
-                    android:text="Others" />
+                    android:background="@drawable/complete_round_border"/>
 
-            </RadioGroup>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -187,45 +203,55 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_12sdp"/>
 
-            <RadioGroup
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/language_radio_group">
+                android:paddingVertical="@dimen/_15sdp"
+                android:paddingHorizontal="@dimen/_11sdp"
+                android:weightSum="3">
 
-                <RadioButton
-                    android:id="@+id/radioButtonhindi"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=" Hindi "
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/uf_hindi_tx"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/gilroy_bold"
-                    android:theme="@style/MyRadioButton"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:buttonTint="@color/colorPrimary"
-                    android:textColor="@color/colorPrimary"
-                    android:text="Hindi" />
+                    android:background="@drawable/complete_round_border"/>
 
-                <RadioButton
-                    android:id="@+id/radioButtonenglish"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:textColor="@color/colorPrimary"
-                    android:theme="@style/MyRadioButton"
+                    android:text="English"
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:id="@+id/uf_english_tx"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/gilroy_bold"
-                    android:buttonTint="@color/colorPrimary"
-                    android:text="English" />
+                    android:background="@drawable/complete_round_border"/>
 
-                <RadioButton
-                    android:id="@+id/radioButtongujarati"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:buttonTint="@color/colorPrimary"
+                    android:text="French"
+                    android:padding="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/uf_french_tx"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/gilroy_bold"
-                    android:textColor="@color/colorPrimary"
-                    android:theme="@style/MyRadioButton"
-                    android:text="Gujarati" />
+                    android:background="@drawable/complete_round_border"/>
 
-            </RadioGroup>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -237,12 +263,13 @@
             android:layout_below="@+id/main_layout"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="-20dp"
-            android:background="@color/colorPrimaryDark"
-            android:fontFamily="@font/gilroy_bold"
+            android:background="@color/colorRed"
+            android:fontFamily="@font/abril_fatface"
             android:gravity="center"
+            android:textSize="@dimen/_12sdp"
             android:padding="@dimen/_12sdp"
             android:text="Start Test"
+            android:id="@+id/start_test_btn"
             android:textColor="@color/white" />
 
     </RelativeLayout>
